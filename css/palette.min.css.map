@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "palette.min.css",
+	"sources": [
+		"../scss/palette.scss"
+	],
+	"mappings": "",
+	"names": []
+}

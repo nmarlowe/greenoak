@@ -20,6 +20,7 @@ header {
   background: $header-color;
   border-bottom: 2px solid $accent-color;
   //border-color: $accent-color;
+  color: $header-text;
   display: block;
   font-family: $sans-serif;
   height: 120px;
@@ -57,7 +58,7 @@ header {
 }
 
 .brand {
-  color: $lighter-color;
+  color: $background-color;
   display: block;
   font-family: $sans-serif;
   left: 240px;
@@ -81,14 +82,14 @@ nav ul {
 }
 
 nav li {
-  color: $lighter-color;
+  color: $background-color;
   display: inline-block;
 }
 
 nav a,
 nav a:enabled,
 nav a:visited {
-  color: $lighter-color;
+  color: $background-color;
   font-family: $sans-serif;
   font-weight: 800;
   padding: 15px 10px;
