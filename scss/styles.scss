@@ -224,6 +224,7 @@ nav a:hover {
 .specialization {
   position: relative;
   height: 150px;
+  padding: 5px;
   width: 150px;
 }
 
@@ -244,7 +245,7 @@ nav a:hover {
     width:100%; height:100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, .6);
+    background: rgba(0, 0, 0, .7);
 }
 
 .specialization:before {
@@ -290,6 +291,11 @@ footer {
     color: $contact-text;
     text-decoration: none;
   }
+}
+
+.oak-icon {
+  height: 30px;
+  width: 30px;
 }
 
 .wrapper {
