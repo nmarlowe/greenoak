@@ -101,7 +101,7 @@ nav {
 
 .navbar-inverse .navbar-header .navbar-brand {
   color: $header-text;
-  font-family: $sans-serif;;
+  font-family: $sans-serif;
   font-weight: 700;
   //text-transform: uppercase;
 }
@@ -226,15 +226,22 @@ nav a:hover {
   text-align: justify;
 }
 
+.page-center {
+  // padding: 150px 0;
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
 .highlights {
   padding: 20px 10px;
   text-align: center;
 }
 
 .specialization {
-  position: relative;
   height: 150px;
   padding: 5px;
+  position: relative;
   width: 150px;
 }
 
@@ -244,35 +251,37 @@ nav a:hover {
 }
 
 .specialization:after, .specialization:before {
-    position:absolute;
-    opacity:0;
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
+    position: absolute;
+    opacity: 0;
+    transition: .5s;
+    -webkit-transition: .5s;
 }
 
 .specialization:after {
-    content:'\A';
-    width:100%; height:100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, .7);
+  content: '\A';
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 .specialization:before {
-    content: attr(data-content);
-    width: 100%;
-    color: $lighter-color;
-    z-index: 1;
-    bottom: 10%;
-    padding: 4px 10px;
-    text-align: center;
-    font-family: $sans-serif;
-    background: transparent;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background: transparent;
+  bottom: 10%;
+  box-sizing: border-box;
+  color: $lighter-color;
+  content: attr(data-content);
+  font-family: $sans-serif;
+  padding: 4px 10px;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
 }
 
-.specialization:hover:after, .specialization:hover:before {
+.specialization:hover:after,
+.specialization:hover:before {
   opacity: 1;
 }
 
@@ -321,6 +330,13 @@ footer {
   //margin-left: 20%;
   //margin-right: 5%;
   //margin-top: 80px;
+}
+
+.thanks-wrapper {
+  font-family: $sans-serif;
+  height: 300px;
+  position: relative;
+  text-align: center;
 }
 
 @media (max-width: 1079px) {

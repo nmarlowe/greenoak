@@ -7,15 +7,17 @@ $.fn.goValidate = function() {
         name: {
             regex: /^[A-Za-z]{3,}$/
         },
-        pass: {
-            regex: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/
-        },
         email: {
             regex: /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/
         },
-        phone: {
-            regex: /^[2-9]\d{2}-\d{3}-\d{4}$/,
+        pass: {
+            regex: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/
         }
+
+        // },
+        // phone: {
+        //     regex: /^[2-9]\d{2}-\d{3}-\d{4}$/,
+        // }
     };
     var validate = function(klass, value) {
         var isValid = true,
@@ -88,3 +90,20 @@ $.fn.goValidate = function() {
     return this;
 };
 $('form').goValidate();
+// 
+// $(document).ready(function () {
+//     $("input#submit").click(function(){
+//         $.ajax({
+//             type: "POST",
+//             url: "process.php", //process to mail
+//             data: $('form.contact').serialize(),
+//             success: function(msg){
+//                 $("#thanks").html(msg) //hide button and show thank you
+//                 $("#form-content").modal('hide'); //hide popup
+//             },
+//             error: function(){
+//                 alert("failure");
+//             }
+//         });
+//     });
+// });
