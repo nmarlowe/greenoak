@@ -32,25 +32,12 @@ header {
 
 hr {
   border-color: $accent-color;
+  width: 80%;
 
   light {
     border-color: $accent-color;
   }
-  width: 80%;
-}
 
-// .container-fluid {
-//   border: 10px solid $accent-color;
-//   display: block;
-//   //min-height: 70vh;
-//   margin-left: 20%;
-//   margin-right: 5%;
-//   margin-top: 80px;
-// }
-
-.box {
-  //margin-top: 80px;
-  //padding-top: 20px;
 }
 
 .logo-image {
@@ -88,8 +75,6 @@ nav {
   -moz-transition: all .75s;
   -webkit-transition: all .755s;
   background-color: $header-color;
-  //border-color: $accent-color;
-  //border-bottom: 2px solid;
   font-family: $sans-serif;
   height: 50px;
   transition: .75s;
@@ -188,8 +173,6 @@ nav {
 
 nav ul {
   list-style: none;
-  //margin: 0 10px;
-  //padding: 0;
 }
 
 nav li {
@@ -243,47 +226,88 @@ nav a:hover {
   padding: 5px;
   position: relative;
   width: 150px;
-}
 
-.specialization img {
-  width: 100%;
-  //vertical-align: top;
-}
+  img {
+    width: 100%;
+    //vertical-align: top;
+  }
 
-.specialization:after, .specialization:before {
-    position: absolute;
-    opacity: 0;
-    transition: .5s;
+  &::after,
+  &::before {
     -webkit-transition: .5s;
+    opacity: 0;
+    position: absolute;
+    transition: .5s;
+  }
+
+  &::after {
+    background: $special-background;
+    content: '\A';
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  &::before {
+    -moz-box-sizing: border-box;
+    background: transparent;
+    bottom: 10%;
+    box-sizing: border-box;
+    color: $lighter-color;
+    content: attr(data-content);
+    font-family: $sans-serif;
+    padding: 4px 10px;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &hover {
+    &::after,
+    &::before {
+      opacity: 1;
+    }
+  }
 }
 
-.specialization:after {
-  background: rgba(0, 0, 0, .7);
-  content: '\A';
-  height: 100%;
-  left: 0;
-  top: 0;
-  width: 100%;
-}
+//
+//
+// .specialization::after,
+// .specialization::before {
+//     position: absolute;
+//     opacity: 0;
+//     transition: .5s;
+//     -webkit-transition: .5s;
+// }
+//
+// .specialization::after {
+//   background: $special-background;
+//   content: '\A';
+//   height: 100%;
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+// }
+//
+// .specialization::before {
+//   -moz-box-sizing: border-box;
+//   background: transparent;
+//   bottom: 10%;
+//   box-sizing: border-box;
+//   color: $lighter-color;
+//   content: attr(data-content);
+//   font-family: $sans-serif;
+//   padding: 4px 10px;
+//   text-align: center;
+//   width: 100%;
+//   z-index: 1;
+// }
 
-.specialization:before {
-  -moz-box-sizing: border-box;
-  background: transparent;
-  bottom: 10%;
-  box-sizing: border-box;
-  color: $lighter-color;
-  content: attr(data-content);
-  font-family: $sans-serif;
-  padding: 4px 10px;
-  text-align: center;
-  width: 100%;
-  z-index: 1;
-}
-
-.specialization:hover:after,
-.specialization:hover:before {
-  opacity: 1;
-}
+// .specialization:hover::after,
+// .specialization:hover::before {
+//   opacity: 1;
+// }
 
 footer {
   background: $footer-color;
@@ -300,12 +324,15 @@ footer {
   position: absolute;
   text-align: center;
   width: 100%;
+
   .left-footer {
     text-align: left;
   }
+
   .right-footer {
     text-align: right;
   }
+
   .footer-link {
     color: $contact-text;
     text-decoration: none;
